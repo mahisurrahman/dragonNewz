@@ -3,11 +3,19 @@ import { Link } from 'react-router-dom';
 import Navbar from './Shared/Navbar/Navbar';
 
 const Login = () => {
+
+    const handleLogin = e =>{
+        e.preventDefault();
+        const email = e.target.email.value;
+        const password =e.target.password.value;
+        console.log(email,password);
+    }
+
     return (
         <div>
             <Navbar></Navbar>
             <div className='w-2/5 mx-auto px-5 py-5 border-2 rounded-lg'>
-                <form>
+                <form onSubmit={handleLogin}>
                     <h2 className='text-center text-3xl font-bold mt-5'>Login Your Account</h2>
                     <hr className='w-4/5 mx-auto mt-8 mb-5' />
                     <input type="email" name="email" id="" className='w-full rounded-lg border-2 h-10 mt-5 px-5' placeholder='Email' required/>
