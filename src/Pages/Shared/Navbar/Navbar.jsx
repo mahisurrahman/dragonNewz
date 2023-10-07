@@ -11,7 +11,7 @@ const Navbar = () => {
 
   </>
   return (
-    <div className="navbar bg-base-100 mb-20">
+    <div className="navbar bg-base-100 mb-20 mt-2">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -32,13 +32,13 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 italic">
             {navLinks}
           </ul>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 italic">
           {navLinks}
         </ul>
       </div>
@@ -48,7 +48,7 @@ const Navbar = () => {
             <img src={userLogo} alt="user_photo" />
           </div>
         </label>
-        <Link>
+        <Link to="/login">
           <button className="btn px-12 py-4 bg-gray-800 text-white hover:text-black ml-4">Login</button>
         </Link>
       </div>
